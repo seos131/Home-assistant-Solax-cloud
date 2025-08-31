@@ -247,14 +247,14 @@ SENSOR_TYPES = [
         key="feedinenergy",
         name="Feedin energy",
         translation_key="feedin_energy",
-        device_class=SensorDeviceClass.POWER,
+        device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfPower.WATT,
     ),
     SensorEntityDescription(
         key="consumeenergy",
         name="Consume energy",
         translation_key="consume_energy",
-        device_class=SensorDeviceClass.POWER,
+        device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfPower.WATT,
     ),
     SensorEntityDescription(

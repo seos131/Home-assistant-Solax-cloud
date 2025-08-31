@@ -11,7 +11,7 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import PERCENTAGE, UnitOfPower
+from homeassistant.const import PERCENTAGE, UnitOfPower, UnitOfEnergy
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -249,7 +249,7 @@ SENSOR_TYPES = [
         name="Feedin energy",
         translation_key="feedin_energy",
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfPower.WATT,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     SensorEntityDescription(
@@ -257,7 +257,7 @@ SENSOR_TYPES = [
         name="Consume energy",
         translation_key="consume_energy",
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfPower.WATT,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     SensorEntityDescription(

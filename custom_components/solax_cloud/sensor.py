@@ -8,6 +8,7 @@ from homeassistant.components.sensor import (
     SensorDeviceClass,
     SensorEntity,
     SensorEntityDescription,
+    SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import PERCENTAGE, UnitOfPower
@@ -249,6 +250,7 @@ SENSOR_TYPES = [
         translation_key="feedin_energy",
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfPower.WATT,
+        state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     SensorEntityDescription(
         key="consumeenergy",
@@ -256,6 +258,7 @@ SENSOR_TYPES = [
         translation_key="consume_energy",
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfPower.WATT,
+        state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     SensorEntityDescription(
         key="uploadTime",
